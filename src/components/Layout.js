@@ -44,7 +44,8 @@ export default class Body extends React.Component {
                     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
                     ) : ((font === 'fira-sans') && (
                     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"/>
-                    ))}                    {_.get(this.props, 'pageContext.site.siteMetadata.favicon', null) && (
+                    ))}                    
+                    {_.get(this.props, 'pageContext.site.siteMetadata.favicon', null) && (
                     <link rel="icon" href={withPrefix(_.get(this.props, 'pageContext.site.siteMetadata.favicon', null))}/>
                     )}
                     <body className={'palette-' + _.get(this.props, 'pageContext.site.siteMetadata.palette', null) + ' font-' + _.get(this.props, 'pageContext.site.siteMetadata.base_font', null)} />
